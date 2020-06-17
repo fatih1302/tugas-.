@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+float Paralel(float R1, float R2, float R3){
+	int Rt = R1*R2*R3;
+	float A, B, C, done, hasil;
+	A =(Rt/R1)*1; B =(Rt/R2)*1; C =(Rt/R3)*1;
+	hasil = (A + B + C);
+	done = hasil / Rt;
+	cout<<"  \nparalel = ";
+	cout<< hasil<<"/"<<Rt;
+	return done;
+}
+int Seri(int R1, int R2, int R3 ){
+	return R1 + R2 + R3;	
+}
+int main(){ int in1,in2,in3;
+	cout<<"~~~~~~~~~~~~~~~~~~~~~`" << endl;
+	cout<<"~~~NILAI HAMBATAN~~~~`" << endl;
+	cout<<"~~~SERI DAN PARAREL~~~`"<< endl;
+	cout<<"Masukkan nilai untuk hambatan R1: ";
+	cin>>in1;
+	cout<<"Masukkan nilai untuk hambatan R2: ";
+	cin>>in2;
+	cout<<"Masukkan nilai untuk hambatan R3: ";
+	cin>>in3;
+	cout<<"\nSeri "<< Seri (in1, in2, in3);
+	cout<<"\nParalel "<< Paralel (in1, in2, in3);
+	return 0;
+}
